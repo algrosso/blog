@@ -1,0 +1,17 @@
+ 2001  sudo apt-get install php-common php-mbstring php-xml php-zip php-curl
+ 2002  ls /etc/php/7.2/mods-available/
+ 2003  ls /etc/php/7.2/cli/conf.d/
+ 2005  php -i | grep -i openssl
+ 2011  php artisan make:
+ 2012  php artisan make:auth
+
+para bajar composer seguir los pasos de la p'agina : php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" 
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" 
+php -r "unlink('composer-setup.php');"
+
+para crear un projecto:
+./composer.phar create-project --prefer-dist laravel/laravel blog "5.8.*"
+cd blog/
+~/composer.phar install   -- instala las bibliotecas de laravel
+npm install               -- instala las bibliotecas de Nodejs
+php artisan serve         -- para correr el sevidor laravel
