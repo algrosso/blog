@@ -18,3 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('books','LibroController');
+/*
+Route::get('/edit/{book}','LibroController@edit')->name('edit');
+
+Route::get('/delete/{book}','LibroController@destroy')->name('delete');
+
+/* 
+Route::get('/books','BookController@index')->name('books');
+
+Route::get('/create','BookController@create')->name('create');
+
+
+Route::patch('/book_u','BookController@update')->name('book_u');
+*/

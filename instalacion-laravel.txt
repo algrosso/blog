@@ -15,3 +15,34 @@ cd blog/
 ~/composer.phar install   -- instala las bibliotecas de laravel
 npm install               -- instala las bibliotecas de Nodejs
 php artisan serve         -- para correr el sevidor laravel
+
+sudo apt install mariadb-client-core-10.1
+sudo apt-get install php7.2-mysql   -- instala el driver php de mysql
+mysql -h 127.0.0.1 -u root -p       -- para ver si el clente mysql esta instalado
+-- dentro de mysql
+create database laravel             -- base de datos 
+php artisan mig:install
+
+-- Usando Git --
+echo "#blog" >> README.md
+git init
+git add README.md
+git commit "Primer commit solo README.md"
+git remote add origin "https://github.com/algrosso/blog"
+git push --set-upstream origin master
+
+git checkout -b develop master
+git checkout develop
+git branch -a
+git add .
+git push --set-upstream origin develop
+git flow init
+
+git flow release start 0.0.1   -- inicia un nuevo release
+git flow release finish 0.0.1  -- finaliza un nuevo release
+
+
+para crear un controlador en laravel hacer: php artisan make:controller PhotoController --resource
+para agregar la ruta a routes/web-php hacer: gedit routes/web.php ;  Route::resource('photos','PhotoControler'); 
+para crear un modelo hacer: php artisan make:model Book
+para crear un fiture sobre la rama develop git checkout -b feature-vistas develop

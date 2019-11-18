@@ -1,0 +1,13 @@
+.contenido {
+	width:80px;
+	height:100px;
+	line-height:100px;
+	margin:0px auto;
+        background-color:#CCCCCC;
+	text-align:center;
+}
+ 
+.contenido img {
+	vertical-align:middle;
+}
+
