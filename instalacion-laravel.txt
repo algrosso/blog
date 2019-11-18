@@ -48,3 +48,5 @@ para crear un modelo hacer: php artisan make:model Book
 para crear un fiture sobre la rama develop git checkout -b feature-vistas develop
 para suprimir una rama en el remoto hacer: git push origin :feature-vistas
 para suprimir un rama local hacer: git branch -d feature_branch
+para una nueva feature: git flow feature start tests
+para correr el test: vendor/bin/phpunit

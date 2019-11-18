@@ -14,8 +14,36 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $appURL = env('APP_URL');
 
-        $response->assertStatus(200);
+        $urls = [
+            '/',
+            '/login',
+            '/books',
+            '/books/1',
+	    '/books/4/edit',
+	    '/books/create',
+	    '/books/index',
+	    '/books/destroy',
+	    '/books/show',
+	    '/books/update',
+	    '/books/store'
+        ];
+
+        echo  PHP_EOL;
+
+        foreach ($urls as $url) {
+            $response = $this->get($url);
+            if((int)$response->status() !== 200){
+                echo  $appURL . $url . ' (FALLO) retorno ' . strval((int)$response->status()) . ' .';
+                $this->assertTrue(false);
+            } else {
+                echo $appURL . $url . ' (Exito !) ';
+                $this->assertTrue(true);
+            }
+            echo  PHP_EOL;
+        }
+
     }
 }
+
