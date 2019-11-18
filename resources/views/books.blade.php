@@ -1,26 +1,6 @@
 <!-- @extends('layouts.app') -->
 
 @section('content')
-<!--
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="list">
-              @foreach ($books as $book)
-		<img src="https://loremflickr.com/40/40?{{ $book->id }}" style="float:left; width:40px; height:40px; border-radius:50%; margin-right:25px;">
-		<div>
-    		<p class="item"> {{ $book-> name }} </p>
-		<p class="item"> {{ $book-> code }} </p>
-		<p class="item"> {{ $book-> num }} </p>
-		</div>
-		<hr size="8px" color="black" />
-	      @endforeach
-            </div>
-            {{ $books->links() }}
-        </div>
-    </div>
-</div>
- -->
 
 <div class="container">
  <div class="row">
