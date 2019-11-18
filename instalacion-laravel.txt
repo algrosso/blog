@@ -46,3 +46,5 @@ para crear un controlador en laravel hacer: php artisan make:controller PhotoCon
 para agregar la ruta a routes/web-php hacer: gedit routes/web.php ;  Route::resource('photos','PhotoControler'); 
 para crear un modelo hacer: php artisan make:model Book
 para crear un fiture sobre la rama develop git checkout -b feature-vistas develop
+para suprimir una rama en el remoto hacer: git push origin :feature-vistas
+para suprimir un rama local hacer: git branch -d feature_branch
