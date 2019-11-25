@@ -43,13 +43,18 @@ class LibroController extends Controller
             'name' => 'required',
             'code' => 'required',
         ]);
-	$b = new Book;
+/*        if($validator->fails())
+        {
+            // Change template.
+            return Redirect::route('books.edit', $id)->withErrors($validator->errors())->withInput();
+        }
+*/	$b = new Book;
         $b->name=$request->name;
 	$b->code=$request->code;
 	if ($request->num) 
 	  $b->num=$request->num;
-        $b->save();
-	return Redirect::to('books');   
+        $r=$b->save();
+	return (Redirect::to('books'));   
    }
 
     /**

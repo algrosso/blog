@@ -1,12 +1,20 @@
 <?php
 
-namespace Tests\Feature;
 
+use App\Book as Libro;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Str;
+
+const cBookNum=4;
 
 class ExampleTest extends TestCase
 {
+
+    use WithoutMiddleware;
+
     /**
      * A basic test example.
      *
@@ -18,7 +26,6 @@ class ExampleTest extends TestCase
 
         $urls = [
             '/',
-            '/login',
             '/books',
             '/books/1',
 	    '/books/4/edit',
@@ -42,8 +49,17 @@ class ExampleTest extends TestCase
                 $this->assertTrue(true);
             }
             echo  PHP_EOL;
+
+	}
+      }
+
+	public function testCanCreateBook()
+	{
+		for($i=0; $i< cBookNum ; $i++){
+	    		$book=factory(Libro::class)->create();
+    			$this->assertTrue($book->save()==1);
+		}
         }
 
-    }
 }
 

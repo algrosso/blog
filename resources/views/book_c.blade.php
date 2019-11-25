@@ -10,7 +10,7 @@
 		Nombre: <input type="text" name="name" value="La bella y la bestia">
 		Código: <input type="text" name="code" value="B.520-34-7"> <br>
 		Número: <input type="text" name="num" value=""><br>
-		<button type="submit" class="btn btn-outline-primary btn-sm" > Nuevo </button> 
+		<button type="submit" class="btn btn-outline-primary btn-sm" name='Register'> Nuevo </button> 
 		</form>
 		</div>
 		<hr size="8px" color="black" />
