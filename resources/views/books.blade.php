@@ -22,9 +22,9 @@
     		  <li class="item">{{ $book->name }}</li>
 		  <li class="item"> {{ $book-> code }} </li>
 		  <li class="item"> {{ $book-> num }} </li>
-		  <button type="button" class="btn btn-outline-primary btn-sm" 
-                          onclick="location.href = '{{ route('books.edit', [$book->id]) }}'"> Editar </button> 
                   <form accept-charset="UTF-8" action="{{ route('books.destroy', [$book->id]) }}" method="POST">
+		    <button type="button" class="btn btn-outline-primary btn-sm" 
+                            onclick="location.href = '{{ route('books.edit', [$book->id]) }}'"> Editar </button> 
 		    @method('DELETE')
 		    @csrf
                     <button type="submit" class="btn btn-outline-danger btn-sm"> Borrar </button>
